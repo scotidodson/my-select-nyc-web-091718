@@ -1,14 +1,13 @@
-def my_select(array) 
-  i =0 
-  select = [] 
-  while i < array.length 
-    if (yield(array[i]))
-      # select.push(array[i])OR 
-      select << array[i] 
+def my_select(collection) 
+  i = 0 
+  true_collection = [] 
+  while i < collection.length 
+    if (yield(collection[i]))
+      true_collection << collection[i] 
     end 
     i += 1 
   end 
-  select 
+  true_collection
 end 
 
 
